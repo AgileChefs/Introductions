@@ -1,1 +1,2 @@
-# My introduction page
+# We are AgileChefs
+## This is our personal introductions page.
