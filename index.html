@@ -1,51 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgileChefs - About Us</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Fira Code', monospace;
+            background-color: #0d1117;
+            color: #c9d1d9;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
+
         .container {
-            width: 80%;
+            width: 90%;
             margin: auto;
-            overflow: hidden;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+            flex-wrap: wrap;
             gap: 20px;
         }
+
         .person {
-            background: #fff;
-            border: 1px solid #ddd;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 15px;
             padding: 20px;
             flex: 1;
+            max-width: 30%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
         }
-        .person:not(:last-child) {
-            border-right: 2px solid #333;
+
+        .person:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
         }
+
         .main-info {
-            background: #333;
+            background: linear-gradient(135deg, #58a6ff, #1f6feb);
             color: #fff;
             padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 15px;
         }
+
         .main-info h1 {
             margin: 0;
+            font-size: 1.5em;
         }
-        .hobbies, .course, .AUS, .fun-fact {
-            background: #e7e7e7;
+
+        .main-info a {
+            color: #c9d1d9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .main-info a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            background: #21262d;
             padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #58a6ff;
             margin-bottom: 10px;
         }
+
+        p {
+            margin: 0 0 10px;
+        }
+
         img {
             max-width: 100%;
-            height: auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #161b22;
+            color: #c9d1d9;
+            border-top: 1px solid #30363d;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .person {
+                max-width: 100%;
+            }
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #c9d1d9;
+        }
+
+        .intro h1 {
+            font-size: 2em;
+            color: #58a6ff;
+        }
+
+        .intro p {
+            font-size: 1.2em;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="intro">
+        <h1>Welcome to AgileChefs!👨‍🍳💻</h1>
+        <p>We are AgileChefs🔥 - a team of passionate tech enthusiasts combining agility in software development with the art of "cooking" exceptional code. Yes, we like to keep it fun and innovative!</p>
+    </div>
+
     <div class="container">
         <!-- Person 1 -->
         <div class="person">
@@ -53,23 +129,19 @@
                 <h1>Mohammed Baraa Adnan</h1>
                 <h2>AUS E-mail: <a href="mailto:b00089025@aus.edu">b00089025@aus.edu</a></h2>
             </header>
-            <section class="AUS">
+            <section>
                 <h2>Year at AUS: Fifth</h2>
-                <h2>AUS major/minor/concentrations: Computer Engineering and Mathematics Double Major</h2>
-                <h2>Reasons for pursuing this degree:</h2>
-                <p>I remember my exploratory behavior towards phones and devices at home since childhood. My interest later settled with video games and made me the tech guy of the house. 
-                    As Computer Engineers, we gain a wide skill set that allows us into different fields beyond AI.
-                    For pursuing math, it is fun.. I hope to be able to find applications of some of the crazy emerging pure math into engineering.
-                </p>
+                <h2>Major/Minor: Computer Engineering & Mathematics Double Major</h2>
+                <p>I remember my exploratory behavior towards phones and devices at home since childhood. My interest later settled with video games and made me the tech guy of the house. As Computer Engineers, we gain a wide skill set that allows us into different fields beyond AI. Pursuing math is fun; I hope to find applications for some of the emerging pure math in engineering.</p>
             </section>
-            <section class="hobbies">
-                <h2>Hobbies and Special Interests</h2>
-                <p>These days I play Oud or do calisthenics in my free time. I also play video games from time to time.</p>
+            <section>
+                <h2>Hobbies</h2>
+                <p>These days I play Oud or do calisthenics in my free time. I also play video games occasionally.</p>
             </section>
-            <section class="fun-fact">
+            <section>
                 <h2>Fun Fact</h2>
-                <p>I have a car and his name is Joe. Here's a picture:</p> 
-                <img src="images/joe.jpeg" alt="meow!">
+                <p>I have a car, and his name is Joe. Here's a picture:</p>
+                <img src="images/joe.jpeg" alt="Joe the car">
             </section>
         </div>
 
@@ -77,21 +149,33 @@
         <div class="person">
             <header class="main-info">
                 <h1>Ahmad Tarek</h1>
-                <h2>AUS E-mail: <a href="mailto:sarah.johnson@example.com">youremail1@aus.edu</a></h2>
+                <h2>AUS E-mail: <a href="mailto:b00091962@aus.edu">b00091962@aus.edu</a></h2>
             </header>
-            <section class="AUS">
-                <h2>Year at University: text</h2>
-                <h2>Major/Minor: text</h2>
-                <h2>Reasons for pursuing this degree:</h2>
-                <p>text</p>
+            <section>
+                <h2>Year at University: Senior 1</h2>
+                <h2>Major/Minor: Computer Science</h2>
+                <p>Reasons for pursuing this degree: LOL, I have a long story to say.
+                    Alright, my journey to studying Computer Science is the definition of chaos. Think plot twists, emotional breakdowns, and a little bit of double-agent action.
+
+                    <br><br>So, it all started with me being Dr. Ahmed. My family had already decided I’d be a doctor. “Dr. Ahmed, the pride of the family!” They didn’t just give me the title, they gave me the whole identity. I hadn’t even started med school yet, and I was already their golden child. But here’s where things get interesting.
+
+<br><br>During a family vacation in Egypt, I had my big decision moment. Everyone packed their bags to head back to the UAE, except me. My papers were registered at a med school in Cairo, my flight to the UAE was booked, but I wasn’t planning to take it. I was fully set to cancel it just a few hours before departure. Then, the drama began. My mom sat me down in full emotional mode, tears everywhere. “Ahmed, how could you leave us? How will we survive without you?” And me, trying to stay calm, said, “YOU’RE the ones leaving me here!” But seeing her cry broke me. Four hours before the flight, I packed my bags and flew back to the UAE, officially leaving Dr. Ahmed behind.
+
+<br><br>Now, I was back in the UAE, still confused about my future. That’s when I registered at AUS for Architecture CAAD. It seemed like a solid plan until my dad’s friend called me. And let me tell you, he did not hold back. He basically said, “Ahmed, don’t. Just don’t. Run as far away from CAAD as you can. Do anything else, literally anything. Maybe Computer Science?” And I thought, “Fine, whatever.” So, I changed my major to Computer Science before the semester even started.
+
+<br><br>Here’s where things get hilarious. For two whole weeks, I was living a double life. Since everything at AUS was online because of COVID, I was attending Computer Science classes there while ALSO attending Marine Engineering classes on-campus somewhere else. I’d sit in marine engineering lectures, looking like I belonged, but in the back of my mind, I knew I had one foot out the door. At first, I thought marine engineering was cool. I loved the hands-on activities and the energy of the campus. But then reality hit: I’d have to live on a ship for six months at a time, away from family, friends, and, well, life. That wasn’t for me. So, after two weeks, I fully committed to Computer Science.
+
+<br><br>And that’s how I ended up here. No more Dr. Ahmed, no more ships, no more CAAD. Just Ahmed, the Computer Science student who made it through a series of questionable decisions. And honestly? I don’t regret a thing.
+                </p>
             </section>
-            <section class="hobbies">
-                <h2>Hobbies and Special Interests</h2>
-                <p>text</p>
+            <section>
+                <h2>Hobbies</h2>
+                <p>
+                    I’m someone who thrives on both mental and physical challenges. My journey started on the football field, where I played at a competitive level for both a club and my university team—until injuries and a busy schedule led me to explore new passions. Now, I channel that same competitive spirit into Jiu-Jitsu, gym workouts, and table tennis, always striving to push my limits. Beyond sports, I’m deeply immersed in technology and coding, constantly building and learning—whether it’s web development, cybersecurity, or machine learning. But my creativity doesn’t stop there. I have a passion for photography, videography, and video editing, capturing stories through visuals, whether it’s travel moments or meaningful content. At the same time, I find inspiration in books, Arabic poetry, and storytelling, appreciating the power of words and artistic expression. Whether I’m competing, creating, or coding, I’m always on a journey of growth, pushing myself to explore new horizons</p>
             </section>
-            <section class="fun-fact">
+            <section>
                 <h2>Fun Fact</h2>
-                <p>text</p>
+                <p>I’ve tackled opponents on the football field, submitted them on the Jiu-Jitsu mats, and now I’m breaking into cybersecurity, because apparently, I like winning in both the physical and digital world!</p>
             </section>
         </div>
 
@@ -99,24 +183,25 @@
         <div class="person">
             <header class="main-info">
                 <h1>Maaz Ahmad</h1>
-                <h2>AUS E-mail: <a href="mailto:john.miller@example.com">youremail2@aus.edu</a></h2>
+                <h2>AUS E-mail: <a href="mailto:youremail2@aus.edu">youremail2@aus.edu</a></h2>
             </header>
-            <section class="AUS">
+            <section>
                 <h2>Year at University: Text here..</h2>
                 <h2>Major/Minor: Text here..</h2>
-                <h2>Reasons for pursuing this degree:</h2>
                 <p>I Text here..</p>
             </section>
-            <section class="hobbies">
-                <h2>Hobbies and Special Interests</h2>
+            <section>
+                <h2>Hobbies</h2>
                 <p>Text here..</p>
             </section>
-            <section class="fun-fact">
+            <section>
                 <h2>Fun Fact</h2>
                 <p>Text here..</p>
             </section>
         </div>
     </div>
-    <p>Last updated: 26/01/2025</p>
+    <footer>
+        <p>Last updated: 29/01/2025</p>
+    </footer>
 </body>
 </html>
